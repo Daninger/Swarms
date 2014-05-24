@@ -29,6 +29,14 @@ public class AbstractBoid {
 	public Vector getVelocity() {
 		return velocity;
 	}
+	
+	public Vector getAccerleration() {
+		return acceleration;
+	}
+	
+	public float getRadius() {
+		return radius;
+	}
 
 	public void addAcceleration(Vector vector) {
 		acceleration.add(vector);
@@ -38,9 +46,6 @@ public class AbstractBoid {
 		velocity.add(vel);
 	}
 
-	public float getRadius() {
-		return radius;
-	}
 
 	public void updatePosition() {
 		acceleration.div(mass);
